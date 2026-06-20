@@ -1,0 +1,36 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+
+# LaTeX intermediate files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex*
+*.toc
+*.lof
+*.lot
+*.bbl~
+
+# PDF (users generate their own)
+*.pdf
+
+# Version archives (user-specific)
+versions/
+
+# Test outputs
+test_output/
+*.test.pdf
