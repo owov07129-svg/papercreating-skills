@@ -91,6 +91,28 @@ git clone https://github.com/owov07129-svg/papercreating-skills.git \
 **OCR**：Tesseract
 **幻灯片**：Marp CLI
 
+### Codex (OpenAI) 用户
+
+`codex/` 目录提供了一套适配版 prompt，功能与 Claude Code 版完全相同，但针对 Codex 的使用方式做了适配：
+
+| 文件 | 用途 | 使用方式 |
+|------|------|----------|
+| `codex/orchestrator.md` | 智能路由（一条 prompt 导向正确 skill） | 复制到 Codex 会话中 |
+| `codex/ppc-tools-skill.md` | 工具链检查 | 复制到会话，说 "Run the toolchain check" |
+| `codex/ppc-template-skill.md` | 模板分析 | 复制到会话，说 "Analyze this template" |
+| `codex/ppc-edit-skill.md` | 排版生成 | 复制到会话，说 "Build my paper" |
+| `codex/ppc-modify-skill.md` | 修改迭代 | 复制到会话，说 "Revise my paper" |
+
+**两种使用方式：**
+
+方式 A —— 直接粘贴：
+把对应 `codex/ppc-*.md` 的内容复制到 Codex 会话中，然后用自然语言触发（如"检查我的工具链"、"分析这个模板"）。
+
+方式 B —— 设为自定义指令：
+把 `codex/orchestrator.md` 的内容复制到 Codex 的自定义指令 / system prompt 中，之后每次对话自动加载，无需每次都粘贴。
+
+> Codex 版与 Claude Code 版的区别：无斜杠命令、无 SKILL.md 格式、触发方式改为自然语言、逻辑完全相同。详见 `codex/README.md`。
+
 ---
 
 ## English
@@ -174,6 +196,28 @@ The skills auto-detect the following tools on your system (no hardcoded paths):
 **Python ecosystem**: pylatex, pygments, PyMuPDF, pdfplumber, pytesseract, python-pptx, python-docx
 **OCR**: Tesseract
 **Slides**: Marp CLI
+
+### Codex (OpenAI) Users
+
+The `codex/` directory contains adapted prompt files with identical functionality, formatted for Codex:
+
+| File | Purpose | How to Use |
+|------|---------|------------|
+| `codex/orchestrator.md` | Smart routing (one prompt → right skill) | Paste into Codex session |
+| `codex/ppc-tools-skill.md` | Toolchain check | Paste into session, say "Run the toolchain check" |
+| `codex/ppc-template-skill.md` | Template analysis | Paste into session, say "Analyze this template" |
+| `codex/ppc-edit-skill.md` | Paper typesetting | Paste into session, say "Build my paper" |
+| `codex/ppc-modify-skill.md` | Revision workflow | Paste into session, say "Revise my paper" |
+
+**Two ways to use:**
+
+Method A — Direct paste:
+Copy the contents of the relevant `codex/ppc-*.md` into your Codex session and use natural language triggers (e.g., "Check my toolchain", "Analyze this template").
+
+Method B — Custom instructions:
+Copy `codex/orchestrator.md` into Codex's custom instructions / system prompt. All skills auto-load on every session — no need to paste each time.
+
+> Codex edition vs. Claude Code edition: No slash commands, no SKILL.md format, natural language triggers instead. The underlying logic is identical. See `codex/README.md` for details.
 
 ---
 
