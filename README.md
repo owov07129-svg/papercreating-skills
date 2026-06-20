@@ -65,7 +65,7 @@ ppc-tools-skill ──→ ppc-template-skill ──→ ppc-edit-skill ──→ 
 ### 安装
 
 ```bash
-git clone https://github.com/owov071229-svg/papercreating-skills.git \
+git clone https://github.com/owov07129-svg/papercreating-skills.git \
   ~/.claude/skills/papercreating-skills
 ```
 
@@ -149,7 +149,7 @@ Plus a template (any of):
 ### Installation
 
 ```bash
-git clone https://github.com/owov071229-svg/papercreating-skills.git \
+git clone https://github.com/owov07129-svg/papercreating-skills.git \
   ~/.claude/skills/papercreating-skills
 ```
 
